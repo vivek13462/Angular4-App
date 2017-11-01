@@ -2,13 +2,12 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: `<h1>Hi! This is inline template of html..</h1>
-  <p> {{UserObj.name}} </p>`,
+  template: `<h1>Hi! This is property binding in  Angular4..</h1>
+ <img src="{{someimage}}">
+ <img [src]="someimage">
+ <img bind-src="someimage">`,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  UserObj = {
-  name: "Vivek",
-  location: "California"
-  }
+someimage = 'https://angular.io/resources/images/logos/angular2/angular.png';
 }
